@@ -20,20 +20,67 @@
         <header class="w-full h-20 flex bg-primary items-center p-3 ml-4 mr-6 justify-between">
             <img class="logo" src="/assets/pic---01.png" alt="">
             <nav class="invisible lg:visible">
-                <ul class="flex gap-4 font-display font-semibold text-lg">
-                    <li>Home</li>
-                    <li>About us</li>
-                    <li>Contact us</li>
+                <ul class="flex text-wrap gap-4 font-display font-semibold text-lg">
+                    <input type="checkbox" id="theme-mode" class="mode" hidden="" />
+                    <div class="container">
+                        <div class="wrap">
+                            <input checked="" type="radio" id="rd-1" name="radio" class="rd-1" hidden="" />
+                            <label for="rd-1" class="label" style="--index: 0;"><span>Home</span></label>
+                            
+                            <input checked="" type="radio" id="rd-1" name="radio" class="rd-2" hidden="" />
+                            <label for="rd-1" class="label" style="--index: 0;"><span>Projects</span></label>
+
+                            <input type="radio" id="rd-2" name="radio" class="rd-3" hidden="" />
+                            <label for="rd-2" class="label" style="--index: 1;"><span>About Me</span></label>
+
+                            <input type="radio" id="rd-3" name="radio" class="rd-4" hidden="" />
+                            <label for="rd-3" class="label" style="--index: 2;"><span>Contact</span></label>
+
+                            <div class="bar"></div>
+                            <div class="slidebar"></div>
+                        </div>
+                    </div>
+
                 </ul>
             </nav>
+
             <span class="lg:hidden" id="nav-icon">
                 <i class="fa-solid fa-bars"></i>
             </span>
         </header>
 
+        <!-- ---------------------mobile nav------------ -->
+
+        <div class="mobile-nav lg:hidden">
+            <ul class="ul w-20 h-80 bg-white">
+                <li class="li">
+                    <button class="button">
+                        <p class="p">Home</p>
+                    </button>
+                </li>
+                <li class="li">
+                    <button class="button">
+                        <p class="p">About us</p>
+                    </button>
+                </li>
+                <li class="li">
+                    <button class="button">
+                        <p class="p">Contact us</p>
+                    </button>
+                </li>
+                <li class="li">
+                    <button class="button">
+                        <p class="p">Projects</p>
+                    </button>
+                </li>
+            </ul>
+        </div>
+
         <!-- -----------------------conatiner section------------------ -->
 
+        <div class="container">
 
+        </div>
 
     </div>
 
