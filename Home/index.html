@@ -17,7 +17,7 @@
 
         <!-- ------Navbar  section ------------ -->
 
-        <header class="w-full h-20 flex bg-primary items-center p-3 ml-4 mr-6 justify-between">
+        <header class="w-full h-20 flex bg-primary items-center p-3 ml-4 mr-6 justify-between" id="nav-header">
             <img class="logo" src="/assets/pic---01.png" alt="">
             <nav class="invisible lg:visible">
                 <ul class="flex text-wrap gap-4 font-display font-semibold text-lg">
@@ -25,16 +25,16 @@
                     <div class="container">
                         <div class="wrap">
                             <input checked="" type="radio" id="rd-1" name="radio" class="rd-1" hidden="" />
-                            <label for="rd-1" class="label" style="--index: 0;"><span>Home</span></label>
+                            <label for="rd-1" class="label" style="--index: 0;"><span><a href="#">Home</a></span></label>
                             
                             <input checked="" type="radio" id="rd-1" name="radio" class="rd-2" hidden="" />
-                            <label for="rd-1" class="label" style="--index: 0;"><span>Projects</span></label>
+                            <label for="rd-1" class="label" style="--index: 0;"><span><a href="#">Projects</a></span></label>
 
                             <input type="radio" id="rd-2" name="radio" class="rd-3" hidden="" />
-                            <label for="rd-2" class="label" style="--index: 1;"><span>About Me</span></label>
+                            <label for="rd-2" class="label" style="--index: 1;"><span><a href="#">About Me</a></span></label>
 
                             <input type="radio" id="rd-3" name="radio" class="rd-4" hidden="" />
-                            <label for="rd-3" class="label" style="--index: 2;"><span>Contact</span></label>
+                            <label for="rd-3" class="label" style="--index: 2;"><span><a href="#">Contact</a></span></label>
 
                             <div class="bar"></div>
                             <div class="slidebar"></div>
@@ -44,33 +44,36 @@
                 </ul>
             </nav>
 
-            <span class="lg:hidden" id="nav-icon">
+            <span class="lg:hidden active" id="nav-icon">
                 <i class="fa-solid fa-bars"></i>
+            </span>
+            <span class="lg:hidden active2" id="Xnav-icon">
+                <i class="fa-solid fa-xmark"></i>
             </span>
         </header>
 
         <!-- ---------------------mobile nav------------ -->
 
-        <div class="mobile-nav lg:hidden">
+        <div class="mobile-nav lg:hidden" id="mobile-nav">
             <ul class="ul w-20 h-80 bg-white">
                 <li class="li">
                     <button class="button">
-                        <p class="p">Home</p>
+                        <p class="p"><a href="#">Home</a></p>
                     </button>
                 </li>
                 <li class="li">
                     <button class="button">
-                        <p class="p">About us</p>
+                        <p class="p"><a href="#">Projects</a></p>
                     </button>
                 </li>
                 <li class="li">
                     <button class="button">
-                        <p class="p">Contact us</p>
+                        <p class="p"><a href="#">About Me</a></p>
                     </button>
                 </li>
                 <li class="li">
                     <button class="button">
-                        <p class="p">Projects</p>
+                        <p class="p"><a href="#">Contact</a></p>
                     </button>
                 </li>
             </ul>

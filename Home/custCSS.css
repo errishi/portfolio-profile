@@ -7,11 +7,30 @@ body {
 .logo {
     width: auto;
     height: 3em;
+    cursor: pointer;
+    margin-left: 1em;
 }
 
 .nav {
     display: flex;
     flex-wrap: wrap;
+}
+
+#Xnav-icon{
+    position: relative;
+    right: 0.82em;
+    font-size: 2em;
+    visibility: hidden;
+    cursor: pointer;
+}
+
+#nav-icon{
+    font-size: 2em;
+    cursor: pointer;
+}
+
+#nav-header{
+    border-radius: 0.8em;
 }
 
 .mode+.container {
@@ -238,6 +257,10 @@ body {
 }
 
 /* ----------------------Mobile nav------------------- */
+
+#mobile-nav{
+    visibility: hidden;
+}
 
 .ul {
     width: fit-content;
