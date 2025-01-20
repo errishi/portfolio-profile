@@ -89,6 +89,7 @@ nav i {
     height: 2.7em;
     align-items: center;
     margin-left: 1.3em;
+    margin-right: 1.5em;
 }
 
 .button:before {
@@ -166,5 +167,11 @@ nav i {
         top: 0;
         left: 0;
         z-index: 9;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1536px){
+    .button{
+        margin-right: 1.5em;
     }
 }
