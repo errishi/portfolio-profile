@@ -240,7 +240,7 @@ nav i {
     }
 
     .content {
-        margin-top: 5em;
+        margin-top: 10em;
     }
 
     .name{
@@ -268,6 +268,10 @@ nav i {
     .image {
         width: 100%;
         height: auto;
+    }
+
+    .image{
+        margin-top: 1.5em;
     }
 
     .hero-container {
@@ -516,7 +520,7 @@ ul {
     bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
 }
 
-/* ----------------------------responsive download btn--------------------------- */
+/* ----------------------------Responsive download btn & About section--------------------------- */
 
 @media (max-width: 640px){
     .download-button{
@@ -524,4 +528,44 @@ ul {
         margin-top: 2em;
         width: 40%;
     }
+
+    .about-box{
+        margin-top: 14em;
+    }
 }
+
+@media (min-width: 1024px){
+    .about-box{
+        margin-top: 25em;
+    }
+    
+}
+
+@media (max-width: 770px) {
+    .hero-container{
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+
+    .social-media{
+        margin: 2.4em 0 2em 0;
+    }
+
+    .download-button{
+        width: inherit;
+    }
+
+    .about-box{
+        margin-top: -3em;
+    }
+}
+
+/* ---------------------------About section-------------------------------- */
+
+.about-box{
+    width: 100%;
+    height: auto;
+    background-color: #c13584;
+}
+
+
