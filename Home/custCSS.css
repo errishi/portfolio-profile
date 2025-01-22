@@ -203,8 +203,12 @@ nav i {
 .content {
     width: 50%;
     height: 100%;
-    /* background-color: #4286f5; */
     color: var(--text-color);
+}
+
+.name{
+    color: #fb8500;
+    font-size: 1.2em;
 }
 
 .role {
@@ -239,6 +243,10 @@ nav i {
         margin-top: 5em;
     }
 
+    .name{
+        font-size: 1.3em;
+    }
+
     .role {
         margin: 0.2em 0 0.5em 0;
         font-size: 3em;
@@ -248,13 +256,9 @@ nav i {
         margin-top: 2em;
         margin-bottom: 2em;
     }
-    
-    .example-2{
-        margin-left: -31em;
-    }
 
-    .content span,
-    p {
+    .para-content
+    {
         font-size: 1em;
     }
 }
@@ -276,6 +280,7 @@ nav i {
 
     .social-media{
         margin-top: 2em;
+        display: flex;
     }
 }
 
@@ -283,6 +288,12 @@ nav i {
 
 ul {
     list-style: none;
+}
+
+.social-media{
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 3em;
 }
 
 .example-2 {
@@ -380,7 +391,6 @@ ul {
     background-color: #1877F2;
 }
 
-
 .example-2 a i {
     z-index: 10;
     font-size: 1.25em;
@@ -389,7 +399,7 @@ ul {
 /* ----------------------------download button-------------------- */
 
 .download-button {
-    --width: 100px;
+    --width: 25%;
     --height: 35px;
     --tooltip-height: 35px;
     --tooltip-width: 90px;
@@ -419,6 +429,7 @@ ul {
     line-height: var(--tooltip-height);
     bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
     left: calc(50% - var(--tooltip-width) / 2);
+    z-index: 1;
 }
 
 .download-button::after {
@@ -478,8 +489,9 @@ ul {
     height: 24px;
 }
 
-.download-buttonhover {
+.download-button:hover {
     background: #6c18ff;
+    cursor: pointer;
 }
 
 .download-button:hover .text {
@@ -508,7 +520,8 @@ ul {
 
 @media (max-width: 640px){
     .download-button{
-        margin-left: 35%;
+        margin-left: 30%;
         margin-top: 2em;
+        width: 40%;
     }
 }
