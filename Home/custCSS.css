@@ -2,7 +2,7 @@
     /* background-color: #1d2d44; */
     margin: 0;
     padding: 0;
-    font-family:'Inter','sans-serif';
+    font-family: 'Inter', 'sans-serif';
 }
 
 html {
@@ -13,7 +13,11 @@ html {
     --primary-color: #1b263b;
     --accent-color: #4286f5;
     --text-color: #faf9f9;
-    --primary-font: 'Macondo','poppin','sans-serif';
+    --primary-font: 'Macondo', 'poppin', 'sans-serif';
+}
+
+body {
+    background-color: #001d3d;
 }
 
 /* ------------------Nav section-------------- */
@@ -172,16 +176,16 @@ nav i {
     }
 }
 
-@media (min-width: 1024px) and (max-width: 1536px){
-    .button{
+@media (min-width: 1024px) and (max-width: 1536px) {
+    .button {
         margin-right: 1.5em;
     }
 }
 
 /* -----------------hero section responsive------------ */
 
-@media (max-width: 640px){
-    .hero-container{
+@media (max-width: 640px) {
+    .hero-container {
         flex-direction: column;
         align-items: center;
         width: 100%;
@@ -190,50 +194,109 @@ nav i {
 
 /* -----------------------hero-container---------------- */
 
-.hero-container{
-    border: 2px sild red;
-    background-color: #ff7d00;
+.hero-container {
     display: flex;
     padding: 5em;
     height: 30em;
 }
 
-.content{
+.content {
     width: 50%;
     height: 100%;
-    background-color: #4286f5;
+    /* background-color: #4286f5; */
+    color: var(--text-color);
 }
 
-.role{
+.role {
     font-size: 2em;
     font-family: var(--primary-font);
 }
 
-.image{
+.image {
     width: 50%;
     height: 100%;
-    background-color: #faf9f9;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* ---------------------responsive image----------------------- */
+
+@media (min-width: 1024px) {
+    .image {
+        width: auto;
+        height: fit-content;
+    }
+
+    .image img {
+        max-width: 100%;
+        height: auto;
+        margin-top: -20px;
+        margin-right: -5em;
+    }
+
+    .content {
+        margin-top: 5em;
+    }
+
+    .role {
+        margin: 0.2em 0 0.5em 0;
+        font-size: 3em;
+    }
+
+    .social-media {
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+    
+    .example-2{
+        margin-left: -31em;
+    }
+
+    .content span,
+    p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 640px) {
+    .content,
+    .image {
+        width: 100%;
+        height: auto;
+    }
+
+    .hero-container {
+        padding: 2em;
+    }
+
+    .content p {
+        margin-bottom: 1em;
+    }
+
+    .social-media{
+        margin-top: 2em;
+    }
 }
 
 /* -------social media -------------------- */
 
 ul {
     list-style: none;
-  }
-  
-  .example-2 {
+}
+
+.example-2 {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .example-2 .icon-content {
+}
+
+.example-2 .icon-content {
     margin: 0 10px;
     position: relative;
-  }
-  .example-2 .icon-content .tooltip {
+}
+
+.example-2 .icon-content .tooltip {
     position: absolute;
     top: -30px;
     left: 50%;
@@ -245,13 +308,15 @@ ul {
     visibility: hidden;
     font-size: 14px;
     transition: all 0.3s ease;
-  }
-  .example-2 .icon-content:hover .tooltip {
+}
+
+.example-2 .icon-content:hover .tooltip {
     opacity: 1;
     visibility: visible;
     top: -50px;
-  }
-  .example-2 .icon-content a {
+}
+
+.example-2 .icon-content a {
     position: relative;
     overflow: hidden;
     display: flex;
@@ -263,20 +328,24 @@ ul {
     color: #4d4d4d;
     background-color: #fff;
     transition: all 0.3s ease-in-out;
-  }
-  .example-2 .icon-content a:hover {
+}
+
+.example-2 .icon-content a:hover {
     box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
-  }
-  .example-2 .icon-content a{
+}
+
+.example-2 .icon-content a {
     position: relative;
     z-index: 1;
     width: 26px;
     height: 26px;
-  }
-  .example-2 .icon-content a:hover {
+}
+
+.example-2 .icon-content a:hover {
     color: white;
-  }
-  .example-2 .icon-content a .filled {
+}
+
+.example-2 .icon-content a .filled {
     position: absolute;
     top: auto;
     bottom: 0;
@@ -285,29 +354,161 @@ ul {
     height: 0;
     background-color: #000;
     transition: all 0.3s ease-in-out;
-  }
-  .example-2 .icon-content a:hover .filled {
-    height: 100%;
-  }
-  .example-2 .icon-content a[data-social="github"] .filled,
-  .example-2 .icon-content a[data-social="github"] ~ .tooltip {
-    background-color: #3d5a80;
-  }
-  .example-2 .icon-content a[data-social="linkdin"] .filled,
-  .example-2 .icon-content a[data-social="linkdin"] ~ .tooltip {
-    background-color: #0077B5;
-  }
-  .example-2 .icon-content a[data-social="instagram"] .filled,
-  .example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
-    background-color: #c13584;
-  }
-  .example-2 .icon-content a[data-social="facebook"] .filled,
-  .example-2 .icon-content a[data-social="facebook"] ~ .tooltip {
-    background-color: #1877F2;
-  }
-  
+}
 
-  .example-2 a i{
+.example-2 .icon-content a:hover .filled {
+    height: 100%;
+}
+
+.example-2 .icon-content a[data-social="github"] .filled,
+.example-2 .icon-content a[data-social="github"]~.tooltip {
+    background-color: #3d5a80;
+}
+
+.example-2 .icon-content a[data-social="linkdin"] .filled,
+.example-2 .icon-content a[data-social="linkdin"]~.tooltip {
+    background-color: #0077B5;
+}
+
+.example-2 .icon-content a[data-social="instagram"] .filled,
+.example-2 .icon-content a[data-social="instagram"]~.tooltip {
+    background-color: #c13584;
+}
+
+.example-2 .icon-content a[data-social="facebook"] .filled,
+.example-2 .icon-content a[data-social="facebook"]~.tooltip {
+    background-color: #1877F2;
+}
+
+
+.example-2 a i {
     z-index: 10;
-    font-size: 1.3em;
-  }
+    font-size: 1.25em;
+}
+
+/* ----------------------------download button-------------------- */
+
+.download-button {
+    --width: 100px;
+    --height: 35px;
+    --tooltip-height: 35px;
+    --tooltip-width: 90px;
+    --gap-between-tooltip-to-button: 18px;
+    --button-color: #1163ff;
+    --tooltip-color: #fff;
+    width: var(--width);
+    height: var(--height);
+    background: var(--button-color);
+    position: relative;
+    text-align: center;
+    border-radius: 0.45em;
+    font-family: "Arial";
+    transition: background 0.3s;
+    margin-top: 1em;
+}
+
+.download-button::before {
+    position: absolute;
+    content: attr(data-tooltip);
+    width: var(--tooltip-width);
+    height: var(--tooltip-height);
+    background-color: var(--tooltip-color);
+    font-size: 0.9rem;
+    color: #111;
+    border-radius: .25em;
+    line-height: var(--tooltip-height);
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+    left: calc(50% - var(--tooltip-width) / 2);
+}
+
+.download-button::after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: var(--tooltip-color);
+    left: calc(50% - 10px);
+    bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+}
+
+.download-button::after,
+.download-button::before {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-wrapper,
+.text,
+.icon {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    color: #fff;
+}
+
+.text {
+    top: 0
+}
+
+.text,
+.icon {
+    transition: top 0.5s;
+}
+
+.icon {
+    color: #fff;
+    top: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.download-buttonhover {
+    background: #6c18ff;
+}
+
+.download-button:hover .text {
+    top: -100%;
+}
+
+.download-button:hover .icon {
+    top: 0;
+}
+
+.download-button:hover:before,
+.download-button:hover:after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.download-button:hover:after {
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+}
+
+.download-button:hover:before {
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+}
+
+/* ----------------------------responsive download btn--------------------------- */
+
+@media (max-width: 640px){
+    .download-button{
+        margin-left: 35%;
+        margin-top: 2em;
+    }
+}
