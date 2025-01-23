@@ -187,6 +187,23 @@ nav i {
     }
 }
 
+@media (max-width:770px) {
+    .arrow{
+        left: 4.8em;
+    }
+
+    .link-container a{
+        width: 9em;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .button{
+        font-size: 14px;
+        width: 9em;
+    }
+}
+
 @media (min-width: 1024px) and (max-width: 1536px) {
     .button {
         margin-right: 1.5em;
