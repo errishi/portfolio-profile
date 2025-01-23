@@ -192,7 +192,7 @@ nav i {
         margin-right: 1.5em;
     }
 
-    .mobile-logo{
+    .mobile-logo {
         position: absolute;
     }
 }
@@ -231,13 +231,13 @@ nav i {
     font-family: var(--primary-font);
 }
 
-.role h1{
+.role h1 {
     color: #fc6d6d;
     font-weight: 500;
     position: relative;
 }
 
-.role h1::after{
+.role h1::after {
     content: " ";
     position: absolute;
     left: 0;
@@ -248,8 +248,8 @@ nav i {
     animation: typing 1.5s steps(19) infinite;
 }
 
-@keyframes typing{
-    100%{
+@keyframes typing {
+    100% {
         left: 100%;
         margin: 0 -35px 0 -35px;
     }
@@ -292,10 +292,6 @@ nav i {
         font-size: 3em;
     }
 
-    .role h1::after{
-        
-    }
-
     .social-media {
         margin-top: 2em;
         margin-bottom: 2em;
@@ -307,6 +303,7 @@ nav i {
 }
 
 @media (max-width: 640px) {
+
     .content,
     .image {
         width: 100%;
@@ -333,9 +330,9 @@ nav i {
         align-items: center;
         row-gap: 1em;
     }
-    
-    @keyframes typing{
-        100%{
+
+    @keyframes typing {
+        100% {
             left: 116%;
             margin: 0 -35px 0 -35px;
         }
@@ -703,6 +700,7 @@ ul {
 .heading {
     position: absolute;
     font-size: 2em;
+    font-weight: 500;
 }
 
 .heading-arrow {
@@ -722,4 +720,181 @@ ul {
 
 .para-content-heading {
     margin-top: 1em;
+}
+
+/* --------------------------------------------Skill Section---------------------------- */
+
+.skill-box {
+    width: 100%;
+    height: 100%;
+    color: var(--text-color);
+    background-color: #003d5b;
+    margin: 2em 0 2em 0;
+    padding: 3em;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    row-gap: 4em;
+}
+
+.arrow {
+    width: 5em;
+    height: 4px;
+    background-color: #fb8500;
+    position: relative;
+    margin: 2.5em 0 0 7.7em;
+    display: flex;
+    left: 17em;
+}
+
+.skill-heading {
+    position: absolute;
+    left: 46%;
+}
+
+.skill-header {
+    font-weight: 500;
+    font-size: 1.5em;
+}
+
+.card {
+    width: 190px;
+    height: 254px;
+    background: #171717;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0px 0px 3px 1px #00000088;
+    cursor: pointer;
+}
+
+.card .card-content {
+    border-radius: 5px;
+    background: #171717;
+    width: 186px;
+    height: 250px;
+    z-index: 1;
+    padding: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-content::before {
+    opacity: 0;
+    transition: opacity 300ms;
+    content: " ";
+    display: block;
+    background: white;
+    width: 5px;
+    height: 50px;
+    position: absolute;
+    filter: blur(50px);
+    overflow: hidden;
+}
+
+.card:hover .card-content::before {
+    opacity: 1;
+}
+
+.card::before {
+    opacity: 0;
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 80px;
+    height: 360px;
+    background: linear-gradient(#ff2288, #387ef0);
+    transition: opacity 300ms;
+    animation: rotation_9018 8000ms infinite linear;
+    animation-play-state: paused;
+}
+
+.card:hover::before {
+    opacity: 1;
+    animation-play-state: running;
+}
+
+.card::after {
+    position: absolute;
+    content: " ";
+    display: block;
+    width: 250px;
+    height: 360px;
+    background: #17171733;
+    backdrop-filter: blur(50px);
+}
+
+@keyframes rotation_9018 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.Card-box {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    row-gap: 3em;
+}
+
+
+/* ----------------------------------Responsive Skill section------------------------- */
+
+@media (max-width: 640px) {
+    .skill-box {
+        margin-top: 20em;
+        flex-direction: column;
+        row-gap: 7em;
+    }
+
+    .skill-heading {
+        position: relative;
+        top: 0em;
+        left: 0.58em;
+        font-size: 1.8em;
+    }
+
+    .skill-header {
+        margin-left: -0.9em;
+    }
+
+    .arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -11.5em;
+        margin-left: -12em;
+        right: 7em;
+        top: 11em;
+    }
+
+    .Card-box {
+        row-gap: 2em;
+        column-gap: 1em;
+    }
+
+    .card {
+        width: 150px;
+        height: 200px;
+    }
+}
+
+@media (min-width: 380px) and (max-width: 640px) {
+    .Card-box {
+        row-gap: 1em;
+        column-gap: 0.6em;
+    }
+
+    .card {
+        width: 140px;
+        height: 200px;
+    }
 }
