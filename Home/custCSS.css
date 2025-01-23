@@ -7,6 +7,7 @@
 
 html {
     font-size: 12pt;
+    overflow-x: hidden;
 }
 
 :root {
@@ -18,6 +19,7 @@ html {
 
 body {
     background-color: #001d3d;
+    overflow-x: hidden;
 }
 
 /* ------------------Nav section-------------- */
@@ -26,8 +28,9 @@ body {
     width: 15em;
     height: 13em;
     display: flex;
-    position: absolute;
-    top: -4.6em;
+    position: relative;
+    top: 0;
+    left: -5em;
     visibility: hidden;
 }
 
@@ -222,12 +225,37 @@ nav i {
     font-family: var(--primary-font);
 }
 
+.role h1{
+    color: #fc6d6d;
+    font-weight: 500;
+    position: relative;
+}
+
+.role h1::after{
+    content: " ";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #001d3d;
+    border-left: 2px solid #fc6d6d;
+    animation: typing 1.5s steps(19) infinite;
+}
+
+@keyframes typing{
+    100%{
+        left: 100%;
+        margin: 0 -35px 0 -35px;
+    }
+}
+
 .image {
     width: 50%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 10;
 }
 
 /* ---------------------responsive image----------------------- */
@@ -258,6 +286,10 @@ nav i {
         font-size: 3em;
     }
 
+    .role h1::after{
+        
+    }
+
     .social-media {
         margin-top: 2em;
         margin-bottom: 2em;
@@ -269,7 +301,6 @@ nav i {
 }
 
 @media (max-width: 640px) {
-
     .content,
     .image {
         width: 100%;
@@ -295,6 +326,13 @@ nav i {
         justify-content: center;
         align-items: center;
         row-gap: 1em;
+    }
+    
+    @keyframes typing{
+        100%{
+            left: 116%;
+            margin: 0 -35px 0 -35px;
+        }
     }
 }
 
