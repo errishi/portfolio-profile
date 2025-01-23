@@ -10,7 +10,7 @@ html {
 }
 
 :root {
-    --primary-color: #1b263b;
+    --primary-color: #004e98;
     --accent-color: #4286f5;
     --text-color: #faf9f9;
     --primary-font: 'Macondo', 'poppin', 'sans-serif';
@@ -22,7 +22,7 @@ body {
 
 /* ------------------Nav section-------------- */
 
-.mobile-logo{
+.mobile-logo {
     width: 15em;
     height: 13em;
     display: flex;
@@ -57,7 +57,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: var(--accent-color);
+    background-color: #6096ba;
 }
 
 nav .home-link {
@@ -135,7 +135,7 @@ nav i {
 
 /* -------------------------nav-responsive-------------------- */
 @media (max-width: 640px) {
-    .mobile-logo{
+    .mobile-logo {
         visibility: visible;
     }
 
@@ -212,7 +212,7 @@ nav i {
     color: var(--text-color);
 }
 
-.name{
+.name {
     color: #fb8500;
     font-size: 1.2em;
 }
@@ -238,7 +238,7 @@ nav i {
         height: fit-content;
     }
 
-    #myImg{
+    #myImg {
         max-width: 100%;
         height: auto;
         margin-top: -20px;
@@ -249,7 +249,7 @@ nav i {
         margin-top: 10em;
     }
 
-    .name{
+    .name {
         font-size: 1.3em;
     }
 
@@ -263,20 +263,20 @@ nav i {
         margin-bottom: 2em;
     }
 
-    .para-content
-    {
+    .para-content {
         font-size: 1em;
     }
 }
 
 @media (max-width: 640px) {
+
     .content,
     .image {
         width: 100%;
         height: auto;
     }
 
-    .image{
+    .image {
         margin-top: 1.5em;
     }
 
@@ -288,9 +288,13 @@ nav i {
         margin-bottom: 1em;
     }
 
-    .social-media{
+    .social-media {
         margin-top: 2em;
         display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 1em;
     }
 }
 
@@ -300,7 +304,7 @@ ul {
     list-style: none;
 }
 
-.social-media{
+.social-media {
     display: flex;
     justify-content: flex-start;
     column-gap: 3em;
@@ -409,7 +413,7 @@ ul {
 /* ----------------------------download button-------------------- */
 
 .download-button {
-    --width: 25%;
+    --width: 35%;
     --height: 35px;
     --tooltip-height: 35px;
     --tooltip-width: 90px;
@@ -528,49 +532,150 @@ ul {
 
 /* ----------------------------Responsive download btn & About section--------------------------- */
 
-@media (max-width: 640px){
-    .download-button{
+@media (max-width: 640px) {
+    .download-button {
         margin-top: 3em;
         width: 40%;
     }
 
-    .about-box{
-        margin-top: 14em;
+    .about-box {
+        position: relative;
+        top: 20em;
+    }
+
+    .heading,
+    .heading-arrow {
+        margin: 0 32% 0 32%;
+    }
+
+    .about-section {
+        flex-direction: column;
+        margin: 5em -6.5em 1em -1.5em;
+        width: auto;
+        height: auto;
+    }
+
+    .experience {
+        margin-bottom: 2em;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        font-weight: 600;
+        font-size: 1.2em;
+        position: relative;
+        left: -8em;
+    }
+
+    .about-me {
+        width: 23em;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 0.95em;
+        margin: 0 .8em 0 -4em;
     }
 }
 
-@media (min-width: 1024px){
-    .about-box{
+@media (min-width: 1024px) {
+    .about-box {
         margin-top: 25em;
     }
-    
+
+    .experience {
+        width: auto;
+        height: auto;
+        transform: rotate(-90deg);
+        margin-left: -2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .about-me {
+        font-size: 1.3em;
+        margin-left: 4em;
+    }
+
+    .about-section {
+        width: 90%;
+    }
+
+    .about-section-arrow {
+        width: 13%;
+        height: 4px;
+        background-color: #fb8500;
+        transform: rotate(90deg);
+        position: absolute;
+        left: 5.3em;
+        margin-top: 7em;
+    }
 }
 
 @media (max-width: 770px) {
-    .hero-container{
+    .hero-container {
         padding-left: 3em;
         padding-right: 3em;
     }
 
-    .social-media{
+    .social-media {
         margin: 2.4em 0 2em 0;
     }
 
-    .download-button{
+    .download-button {
         width: inherit;
     }
 
-    .about-box{
+    .about-box {
         margin-top: 6em;
+    }
+
+    .about-section {
+        flex-direction: column;
+    }
+
+    .experience {
+        margin: 0 0 1.2em 42%;
+        font-weight: 500;
+        font-size: 1.3em;
     }
 }
 
 /* ---------------------------About section-------------------------------- */
 
-.about-box{
+.about-box {
     width: 100%;
     height: auto;
-    background-color: #c13584;
+    background-color: #3a506b;
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-around;
+    padding: 2em
 }
 
+.heading {
+    position: absolute;
+    font-size: 2em;
+}
 
+.heading-arrow {
+    width: 7em;
+    height: 4px;
+    background-color: #fb8500;
+    position: absolute;
+    margin-top: 2.7em;
+}
+
+.about-section {
+    display: flex;
+    margin-top: 5em;
+    justify-content: space-around;
+    height: auto;
+}
+
+.para-content-heading {
+    margin-top: 1em;
+}
