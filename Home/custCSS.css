@@ -8,6 +8,7 @@
 html {
     font-size: 12pt;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -173,6 +174,7 @@ nav i {
 
     #sidebar-active:checked~.link-container {
         right: 0;
+        z-index: 15;
     }
 
     #sidebar-active:checked~#overlay {
@@ -188,6 +190,10 @@ nav i {
 @media (min-width: 1024px) and (max-width: 1536px) {
     .button {
         margin-right: 1.5em;
+    }
+
+    .mobile-logo{
+        position: absolute;
     }
 }
 
