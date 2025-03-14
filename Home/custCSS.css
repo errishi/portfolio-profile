@@ -1036,18 +1036,18 @@ ul {
     margin-top: -9em;
 }
 
-.project-logo img{
+.project-logo img {
     width: 8em;
     height: auto;
     margin-top: 15em;
     cursor: pointer;
 }
 
-.projectHeading{
+.projectHeading {
     color: #fff;
 }
 
-.projects{
+.projects {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -1071,19 +1071,128 @@ ul {
         margin-top: -11em;
     }
 
-    .project-arrow{
+    .project-arrow {
         margin-top: -19.3em;
     }
+}
+
+/* ----------------------------------footer section---------------------- */
+
+.footer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #000;
+    font-size: 0.9em;
+    color: #7b7b7b;
+    padding: 4em 0;
+}
+
+.footer-box {
+    width: auto;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.footer-box ul {
+    width: 9em;
+    margin: 5em 1em;
+    line-height: 2em;
+}
+
+.footer-box ul li a:hover {
+    color: #f39f5f;
+    transition: all 0.4s ease-in-out;
+    margin-left: 5px
+}
+
+.discription {
+    width: 20em;
+}
+
+.footer-logo img {
+    width: 14em;
+    height: 14em;
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -5em;
+    cursor: pointer;
+}
+
+.news-section {
+    display: flex;
+    gap: 2em;
+}
+
+.news-header {
+    position: relative;
+    top: -7.4em;
+    left: 2em;
+}
+
+.news-col form {
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+}
+
+.news-col p {
+    color: #7b7b7b;
+    font-size: 15px;
+}
+
+.news-col form input {
+    width: 100%;
+    background: #212529;
+    border: none;
+    padding: 13px;
+    border-radius: 100px;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.news-col form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: #ffb742;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.news-col form button:hover {
+    background-color: #fb8c00;
+}
+
+.news-col form button i {
+    font-size: 26px;
+}
+
+.news-letter {
+    margin-top: -1em;
 }
 
 /* -------------------------------back to top button------------ */
 
 .static-btn {
-    position: relative;
+    position: absolute;
     display: flex;
     justify-content: flex-end;
-    top: -1em;
-    right: 2em;
+    bottom: -133em;
+    right: 3em;
 }
 
 .btn-B2UP {
