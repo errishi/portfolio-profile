@@ -1040,6 +1040,7 @@ ul {
     width: 8em;
     height: auto;
     margin-top: 15em;
+    cursor: pointer;
 }
 
 .projectHeading{
