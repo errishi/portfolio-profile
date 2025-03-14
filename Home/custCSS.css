@@ -1138,6 +1138,7 @@ ul {
 .news-section {
     display: flex;
     gap: 2em;
+    margin-left: -4em;
 }
 
 .news-header {
