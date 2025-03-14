@@ -20,9 +20,14 @@ html {
     --size: 3rem;
 }
 
+li{
+    list-style: none;
+}
+
 body {
     background-color: #001d3d;
     overflow-x: hidden;
+    overflow: hidden;
 }
 
 /* ------------------Nav section-------------- */
@@ -1090,6 +1095,10 @@ ul {
     padding: 4em 0;
 }
 
+.foot-Heading{
+    font-size: 1.4em;
+}
+
 .footer-box {
     width: auto;
     height: auto;
@@ -1183,6 +1192,32 @@ ul {
 
 .news-letter {
     margin-top: -1em;
+}
+
+.sub_footer{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: -168em;
+    left: 5em;
+    font-size: 0.8em;
+    color: #b4b4b4;
+}
+
+.copyright{
+    margin-left: 6em;
+}
+
+.condition{
+    display: flex;
+    gap: 2em;
+    margin-left: 48em;
+}
+
+.condition a:hover{
+    color: #f39f5f;
+    border-bottom: 1px solid #f39f5f;
+    transition: all 0.3s ease-in-out;
 }
 
 /* -------------------------------back to top button------------ */
